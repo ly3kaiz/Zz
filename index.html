@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دمج الوحيوانات – النسخة المظلمة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <img src="assets/logo.png" class="main-logo" alt="Beast Merge">
+            <div class="title-row">
+                <span class="sword-icon">⚔</span>
+                <h1 class="game-title">دمج الحيوانات</h1>
+                <span class="sword-icon">⚔</span>
+            </div>
+            <p class="game-subtitle">DZ Animal Merge Event Helper & AI Solver</p>
+        </header>
+
+        <!-- AI Panel -->
+        <div class="ai-panel">
+            <div class="ai-oracle-label">☠︎Ďz</div>
+            <div class="ai-body">
+                <div class="ai-arrow-box" id="ai-direction">?</div>
+                <div class="ai-details">
+                    <div class="ai-status" id="ai-status">جاهز – اضغط تحليل</div>
+                    <div class="confidence-track">
+                        <div class="confidence-fill" id="confidence-fill"></div>
+                    </div>
+                    <div class="confidence-label" id="confidence-label">البقاء: –</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Board -->
+        <div class="board-wrapper">
+            <div class="board" id="board"></div>
+        </div>
+        <div class="mode-bar" id="mode-bar"></div>
+
+        <!-- D-Pad -->
+        <div class="dpad-wrapper">
+            <div class="dpad">
+                <div></div>
+                <button class="dir-btn" data-dir="up">⬆</button>
+                <div></div>
+                <button class="dir-btn" data-dir="left">⬅</button>
+                <div class="dpad-center">✦</div>
+                <button class="dir-btn" data-dir="right">➡</button>
+                <div></div>
+                <button class="dir-btn" data-dir="down">⬇</button>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="tool-bar">
+            <button class="tool-btn" id="btn-undo">↩ تراجع</button>
+            <button class="tool-btn" id="btn-edit-mode">✎ تعديل</button>
+            <button class="tool-btn" id="btn-clear">⊗ مسح</button>
+            <button class="tool-btn" id="btn-random">⚄ عشوائي</button>
+            <button class="tool-btn" id="btn-analyze">◎ تحليل</button>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal-overlay hidden" id="spawn-overlay">
+        <div class="modal-box">
+            <div class="modal-title">⚡ إنبات وحش</div>
+            <div class="modal-hint">اختر المستوى (1–5)</div>
+            <div class="level-picker" id="spawn-picker"></div>
+            <button class="modal-cancel" id="spawn-cancel">✕ إلغاء</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="edit-overlay">
+        <div class="modal-box">
+            <div class="modal-title">✎ تعديل البلاطة</div>
+            <div class="level-picker" id="edit-picker"></div>
+            <button class="modal-cancel" id="edit-cancel">✕ إلغاء</button>
+        </div>
+    </div>
+
+    <!-- Merge Banner -->
+    <div class="merge-banner hidden" id="merge-banner">
+        <div class="merge-glow-ring"></div>
+        <div class="merge-title">✨ دمج أسطوري ✨</div>
+        <div class="merge-sub">روح المستوى ١١ صعدت!</div>
+    </div>
+
+    <!-- Script -->
+    <script src="game.js"></script>
+</body>
+</html>
